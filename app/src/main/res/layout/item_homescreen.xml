@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cell_card"
+    android:layout_width="match_parent"
+    android:layout_height="76dp"
+    android:background="@color/device_disable"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardBackgroundColor="@color/device_disable"
+    android:layout_marginVertical="8dp"
+    app:cardCornerRadius="10dp"
+
+    >
+
+    <RelativeLayout
+        android:id="@+id/cell_container"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="0dp"
+        android:orientation="horizontal"
+        >
+
+        <View
+            android:id="@+id/circle_background"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginBottom="13dp"
+            android:background="@drawable/shape_circle"
+            android:padding="2dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/ico_fence_disable" />
+
+        <ImageView
+            android:id="@+id/device_icon"
+            android:contentDescription="@string/icn_device"
+            android:layout_width="30dp"
+            android:layout_height="37dp"
+            android:layout_alignStart="@+id/circle_background"
+
+            android:layout_alignTop="@+id/circle_background"
+            android:layout_alignEnd="@+id/circle_background"
+            android:layout_alignBottom="@+id/circle_background"
+
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/shape_circle"
+            android:src="@drawable/ico_fence_disable" />
+
+        <View
+            android:id="@+id/top_view"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="0dp"
+            android:layout_toEndOf="@id/circle_background"
+
+            android:background="@drawable/rounded_login_container"/>
+
+        <ImageView
+            android:id="@+id/icn_status"
+            android:layout_width="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="8dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ico_noconexion"
+            android:padding="2dp"
+            android:contentDescription="@string/icn_status"
+            />
+
+        <TextView
+            android:id="@+id/tv_model_id"
+            android:layout_width="wrap_content"
+            android:layout_height="18dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_toStartOf="@+id/icn_status"
+            android:layout_toEndOf="@id/circle_background"
+
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+
+            android:text="@string/model_id"
+            android:textAlignment="viewStart"
+            android:textSize="16sp"
+            android:textStyle="bold"
+             />
+
+        <TextView
+            android:id="@+id/tv_status"
+            android:layout_width="wrap_content"
+            android:layout_height="11dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_toStartOf="@+id/icn_status"
+            android:layout_below="@id/tv_model_id"
+            android:layout_toEndOf="@id/circle_background"
+
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+
+            android:text="@string/device_status"
+            android:textSize="10sp"
+            android:textColor="@color/white"
+            android:textStyle="normal"
+            android:textAllCaps="false"
+
+            />
+
+        <TextView
+            android:id="@+id/tv_device_name"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_below="@id/top_view"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_toEndOf="@id/circle_background"
+
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+
+            android:text="@string/device_name"
+            android:textColor="@color/white"
+
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textAllCaps="false"
+
+            />
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

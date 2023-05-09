@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.createAccount.view.Privacy_policy_fragment"
+    android:background="@color/privacyPagecolor">
+
+    <RelativeLayout
+        android:id="@+id/banner_bar_slim_Relative"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/banner_bar_slim"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@color/pseudo_white"
+            android:elevation="2dp" />
+
+        <ImageView
+            android:id="@+id/iv_logo_slim"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:contentDescription="@string/app_name"
+            android:elevation="2.5dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/logo_paniagua" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/banner_bar_slim_Relative"
+        android:id="@+id/relative_privacy_policy_ask">
+
+        <ScrollView
+        android:id="@+id/scroll_web_privacy"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <WebView
+            android:id="@+id/scv_web_privacy_policy"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </WebView>
+
+    </ScrollView>
+
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_privacy_policy_accept"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/scroll_web_privacy"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/rounded_login_btn_shape"
+        android:text="@string/privacy_policy_accept_button"
+        android:textColor="@color/colorPrimaryDark"
+        tools:ignore="NotSibling" />
+
+
+</RelativeLayout>

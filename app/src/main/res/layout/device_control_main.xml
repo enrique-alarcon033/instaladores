@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="deviceControlMain"
+            type="com.yonusa.paniaguainstaladores.ui.device_control.view.DeviceControlActivity" />
+    </data>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pseudo_white">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+
+        app:layout_constraintBottom_toTopOf="@+id/btn_update_date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        >
+
+        <include
+            android:id="@+id/top_menu"
+            layout="@layout/yonusa_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_alignParentTop="true" />
+
+        <RelativeLayout
+            android:id="@+id/relative_control_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/top_menu">
+
+            <View
+                android:id="@+id/banner_user_info"
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:background="@color/colorPrimary"
+                />
+
+            <TextView
+                android:id="@+id/tv_control_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:textAlignment="center"
+                android:textColor="@color/pseudo_white"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_control_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_control_description"
+                android:layout_marginTop="5dp"
+                android:textAlignment="center"
+                android:textColor="@color/pseudo_white"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_control_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_control_name"
+                android:layout_marginTop="5dp"
+                android:textAlignment="center"
+                android:textColor="@color/pseudo_white"
+                android:textSize="18sp" />
+
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_device_control"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/relative_control_description"
+            android:background="@color/clear"
+            android:padding="8dp"
+            android:scrollbars="vertical" />
+
+
+        <LinearLayout
+            android:id="@+id/ly_control_cards"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/relative_control_description"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="15dp"
+            android:background="@color/clear"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/ly_control1"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/clear"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <RelativeLayout
+                    android:id="@+id/rl_control1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:visibility="gone">
+
+                    <ImageButton
+                        android:id="@+id/ib_control1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/clear"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:onClick="onClick" />
+
+                    <ImageView
+                        android:id="@+id/iv_control1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:layout_margin="20dp"
+                        android:src="@drawable/fence_disable" />
+
+                    <TextView
+                        android:id="@+id/tv_control1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerInParent="true"
+                        android:text="@string/fence_text"
+                        android:textColor="@color/white" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_control2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:visibility="gone">
+
+                    <ImageButton
+                        android:id="@+id/ib_control2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorTransparent"
+                        android:foreground="?attr/selectableItemBackground" />
+
+                    <ImageView
+                        android:id="@+id/iv_control2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:layout_margin="20dp"
+                        android:src="@drawable/panic_disable" />
+
+                    <TextView
+                        android:id="@+id/tv_control2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerInParent="true"
+                        android:text="@string/panic_text"
+                        android:textColor="@color/white" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ly_control2"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <RelativeLayout
+                    android:id="@+id/rl_control3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:visibility="gone">
+
+                    <ImageButton
+                        android:id="@+id/ib_control3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorTransparent"
+                        android:foreground="?attr/selectableItemBackground" />
+
+                    <ImageView
+                        android:id="@+id/iv_control3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:layout_margin="20dp"
+                        android:src="@drawable/door_disable" />
+
+                    <TextView
+                        android:id="@+id/tv_control3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerInParent="true"
+                        android:text="@string/door_text"
+                        android:textColor="@color/white" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_control4"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:visibility="gone">
+
+                    <ImageButton
+                        android:id="@+id/ib_control4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorTransparent"
+                        android:foreground="?attr/selectableItemBackground" />
+
+                    <ImageView
+                        android:id="@+id/iv_control4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:layout_margin="20dp"
+                        android:src="@drawable/lights_disable" />
+
+                    <TextView
+                        android:id="@+id/tv_control4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerInParent="true"
+                        android:text="@string/light_text"
+                        android:textColor="@color/white" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ly_control3"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <RelativeLayout
+                    android:id="@+id/rl_control5"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:visibility="gone">
+
+                    <ImageButton
+                        android:id="@+id/ib_control5"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorTransparent"
+                        android:foreground="?attr/selectableItemBackground" />
+
+                    <ImageView
+                        android:id="@+id/iv_control5"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:layout_margin="20dp"
+                        android:src="@drawable/aux_disable" />
+
+                    <TextView
+                        android:id="@+id/tv_control5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerInParent="true"
+                        android:text="@string/aux1_text"
+                        android:textColor="@color/white" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_control6"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:visibility="gone">
+
+                    <ImageButton
+                        android:id="@+id/ib_control6"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorTransparent"
+                        android:foreground="?attr/selectableItemBackground" />
+
+                    <ImageView
+                        android:id="@+id/iv_control6"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:layout_margin="20dp"
+                        android:src="@drawable/aux_disable" />
+
+                    <TextView
+                        android:id="@+id/tv_control6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerInParent="true"
+                        android:text="@string/aux2_text"
+                        android:textColor="@color/white" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+    <!--Al poner visibility gone lel boton se desaparece y el Relative layout abaarca toda la pantalla-->
+    <Button
+        android:id="@+id/btn_update_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="false"
+        android:backgroundTint="#FFF"
+        android:visibility="gone"
+        android:onClick="onClickSetCurrentDate"
+        android:text="Actualizar hora local"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

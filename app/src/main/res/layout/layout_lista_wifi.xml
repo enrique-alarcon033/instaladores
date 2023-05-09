@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        android:elevation="3dp"
+        card_view:cardCornerRadius="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            >
+
+
+
+            <ImageView
+                android:id="@+id/imgPotencia"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="20dp"
+                android:src="@drawable/cell_background_enable"
+                android:layout_alignParentRight="true"
+                android:scaleType="fitEnd"
+                android:text="-30db"
+                android:textSize="10dp" />
+
+                <TextView
+                    android:id="@+id/txtNombreWifi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:clickable="true"
+                    android:text="NOMBRE RED"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/txtMac"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:text="22:22:22:22:22:22"
+                    android:visibility="gone"
+                    android:textSize="10dp" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/txtPotencia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:visibility="gone"
+            android:text="-50db" />
+
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

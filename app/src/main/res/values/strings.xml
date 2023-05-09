@@ -1,0 +1,188 @@
+<resources>
+
+    -->Log in text
+    <string name="app_name">Instaladores Yonusa 3.0</string>
+    <string name="email">Correo electrónico</string>
+    <string name="password">Contraseña</string>
+    <string name="create_account">Crear cuenta</string>
+    <string name="password_recovery"><u>Recuperar contraseña</u></string>
+    <string name="log_in">Iniciar sesión</string>
+    <string name="show">mostrar</string>
+    <string name="hide">ocultar</string>
+
+
+    <string name="open">Open Navigation Drawer</string>
+    <string name="close">Close Navigation Drawer</string>
+
+    -->Textos de alertas y toasts en log in
+    <string name="enter_email_address">"Escribe tu correo</string>
+    <string name="enter_valid_email">"Escribe un correo válido</string>
+    <string name="enter_valid_password">Escribe un password válido</string>
+
+
+    -->Create account text
+    <string name="name">Nombre</string>
+    <string name="lastname">Apellidos</string>
+    <string name="password_confirm">Confirme contraseña</string>
+    <string name="celphone">Tel. Móvil</string>
+    <string name="privacy_policy_accept_ask">¿Acepta las políticas de privacidad?</string>
+    <string name="privacy_policy_accept_button">"Siguiente"</string>
+
+    -->Textos de alertas y toasts en Create account
+    <string name="invalid_password_lenght">La contraseña debe ser entre 8 y 16 caracteres y contener por lo menos una mayuscula, una minuscula y un numero</string>
+    <string name="empty_name">"Ingresa tu nombre"</string>
+    <string name="empty_lastname">"Ingresa tus apellidos"</string>
+    <string name="empty_password_confirm">"Confirma tu contraseña"</string>
+    <string name="empty_phone">"Ingresa tu numero de celular"</string>
+    <string name="passwords_not_equals">"Las contraseñas no coinciden"</string>
+    <string name="privacy_policy_not_checked">"Acepta las politicas de privacidad"</string>
+
+    -->Textos activación de cuenta
+    <string name="count_activation">"Activación de cuenta"</string>
+    <string name="activation_code">"Código de activación"</string>
+    <string name="activation_text_description">"Hemos enviado un código de activación al correo: "</string>
+    <string name="activation_btn_text">"Activar mi cuenta"</string>
+    <string name="show_privacy_policy"><u>"Acepto las policitas de privacidad"</u></string>
+    <string name="activation_code_btn_accept">"Continuar"</string>
+    <string name="register_process">Estamos registrando su cuenta, por favor espere</string>
+    <string name="empty_verification_code">Ingresa tu código de verificación</string>
+    <string name="success_activation_code">Cuenta activada con éxito</string>
+    <string name="activation_code_inprocess">Activando la cuenta</string>
+
+
+    -->Textos para recuperacion de contraseña
+
+    <string name="title_recovery_password"><b>"Recuperación de contraseña</b></string>
+    <string name="send">"Enviar"</string>
+    <string name="tv_instructions">"Introduce el email de la cuenta que deseas recuperar.</string>
+    <string name="email_unknown">"Este email no existe con una cuenta registrada."</string>
+    <string name="alert_email_error1">Escribe un correo válido</string>
+
+    <string name="new_password_title">Nueva contraseña</string>
+    <string name="instructions_new_password">Hemos enviado un código de recuperación al correo que proporcionaste, el cual deberás introducir debajo. \nTu contraseña debe ser entre 8 y 16 caracteres e incluir almenos 1 letra mayúscula, 1 letra minúscula y 1 número.</string>
+    <string name="password_rules">Tu contraseña debe ser entre 8 y 16 caracteres e incluir almenos 1 letra mayúscula, 1 letra minúscula y 1 número.</string>
+    <string name="hint_recovery_code">Código de recuperación</string>
+    <string name="hint_new_pass">Nueva contraseña</string>
+    <string name="hint_new_pass_confirmation">Confirmación de contraseña</string>
+    <string name="create_a_new_password">Cambiar contraseña</string>
+
+    -->EXAMPLE
+    -->This example show underline(u), bold(b) y italic(i).
+    <string name="register"><u><b><i>Copyright</i></b></u></string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="icn_status">Icono de status</string>
+    <string name="icn_device">Icono del dispositivo</string>
+    <string name="model_id">Model_id</string>
+    <string name="device_status">Device status</string>
+    <string name="device_name">Device name</string>
+
+    -->textos control
+    <string name="fence_text">Cerca</string>
+    <string name="panic_text">Pánico</string>
+    <string name="door_text">Puerta</string>
+    <string name="light_text">Luces</string>
+    <string name="aux1_text">Aux1</string>
+    <string name="aux2_text">Aux2</string>
+    <string name="empty_control">Ocurrio un error obteniendo los datos de control</string>
+    <string name="action_denied">No tienes permisos para controlar esta acción</string>
+
+    <string name="wi_fi_model">Cerca eléctrica</string>
+    <string name="life_fi_model">Botón de vida</string>
+    <string name="monitor_model">Monitor de panel</string>
+    <string name="guest_to">Invitado a - </string>
+
+    <string name="device_connected">Conectado</string>
+    <string name="charging_battery">Cargado batería</string>
+    <string name="using_battery">Usando batería</string>
+    <string name="low_battery">"Batería baja"</string>
+    <string name="device_disconnected">Desconectada</string>
+    <string name="error_get_controls">Error al obtener controles</string>
+
+    -->Alerts
+    <string name="ok_alert_text">Ok</string>
+    <string name="cancel_alert_text">cancel</string>
+    <string name="conection_title">Conexión</string>
+    <string name="conection_message">Revisa la conexión de tu dispositivo</string>
+
+    -->Date events
+    <string name="date_start">Fecha inicial</string>
+    <string name="date_end">Fecha final</string>
+    <string name="search_events_text">Buscar</string>
+    <string name="empty_dates">Fechas vacias</string>
+    <string name="empty_dates_description">Ingresa fecha de inicio y final validas</string>
+    <string name="error_title">Error</string>
+    <string name="error_getting_events">Error al obtener los eventos</string>
+
+    --> User administration text
+    <string name="title_user_list">Usuarios invitados</string>
+
+    <string name="title_add_user">Agregar usuarios</string>
+    <string name="instructions_add_user">Escribe el alias con el que identificarás a tu invitado, después, introduce el email de la persona a quien desees darle acceso y control de tu dispositivo.</string>
+    <string name="guest_alias">Alias del invitado</string>
+    <string name="guest_alias_error">Introduce un alias</string>
+
+    <string name="empty_event_message">No hay eventos en ese rango de fechas</string>
+    <string name="empty_history_title">Historial vacío</string>
+    <string name="events_by_date_title">Historial</string>
+    <string name="rename_control_title">Renombrar control:</string>
+    <string name="rename_device_title">Renombrar dispositivo:</string>
+    <string name="new_control_name_description">Ingrese en nuevo nombre</string>
+    <string name="back">Salir</string>
+    <string name="save">Guardar</string>
+    <string name="success_rename_control">Nombre cambiado con éxito</string>
+    <string name="an_error_ocurred_text">Ocurrio un error inesperado, intente de nuevo</string>
+
+    <string name="title_user_permissions">Permisos de Usuario</string>
+    <string name="invalid_control_name">Ingrese un nombre valido</string>
+    <string name="device_name_success">Nombre cambiado con éxito</string>
+
+    --> Add Devices
+
+    <string name="title_add_devices">Añadir dispositivos</string>
+    <string name="wifi_device">Módulo WiFi</string>
+    <string name="panel_device">Monitor de panel</string>
+    <string name="title_step_1">Ahora conectate a la red:</string>
+    <string name="refresh">Refrescar</string>
+    <string name="title_location_permission" translatable="false">Yonusa 2.0 necesita tu permiso</string>
+    <string name="text_location_permission" translatable="false">Para poder obtener la red a la que estás conectado, por requerimiento del sistema necesitamos obtener tu localización actual. Esta información solo será utilizada en éste proceso.</string>
+    <string name="tv_hardware_instructions">Localiza el botón hardreset en la tarjeta que se muestra arriba, y presionalo hasta que se encienda un led rojo. Esto generará una red a la que deberás conectarte. Para conectarte es necesario ir a Ajustes y en el menú de conexión wifi, seleccionar la red #YONUSA e introducir la contraseña: yonusa0123, al establecer conexión deberás volver a la app Yonusa para continuar con la configuración.</string>
+    <string name="title_select_network">Selecciona una red</string>
+    <string name="string_instructions_get_networks">Hemos encontrado éstas redes cercanas, selecciona una para continuar la instalación.</string>
+    <string name="string_update_networks">Actualizar redes</string>
+    <string name="tv_setup_instructions">Verifica los datos  de configuración sean correcto, el dispositivo Yonusa se conectará a la red con los datos que le proporciones:</string>
+    <string name="lb_wifi_pass">Contraseña de la red wifi</string>
+    <string name="lb_device_name">Nombre de tu dispositivo</string>
+    <string name="btn_register_device">Registrar dispositivo</string>
+    <string name="title_success">Felicidades, has finalizado el alta de tu dispositivo.</string>
+    <string name="lb_success_instructions">La red Wifi de Yonusa se desconectará, asegúrate de estar conectado a una red que cuente con servicio de internet antes de continuar.</string>
+    <string name="btn_success">Finalizar</string>
+    <string name="door_on_message_seconds">Se cerrará la puerta en 5seg</string>
+    <string name="alert_title_atention">Atención</string>
+    <string name="alert_text_location_permissions">Por favor ve al menú de ajustes de tu teléfono y acepta el uso de localización de la app Yonusa.</string>
+    <string name="alert_title_error_get_ssid">Error al obtener nombre de red</string>
+    <string name="alert_text_error_get_ssid">Parece ser que hay un error al obtener el nombre de red a la que estás conectado, por favor intentalo de nuevo.</string>
+    <string name="text_btn_next">Siguiente</string>
+    <string name="yonusaNetworksName">\"YONUSA\"</string>
+    <string name="dev_control_event_dialog_title">Actualización de hora</string>
+    <string name="dev_control_event_dialog_msg">¿Se encuentra a menos de 10 metros de la cerca eléctrica?</string>
+    <string name="set_data_title">Fecha actualizada</string>
+    <string name="date_not_updated_title">La fecha no se actualizó</string>
+
+    <string name="wifi_total_pass">@Y0nur1fa_18</string>
+    <string name="title_activity_main2">MainActivity2</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+
+
+</resources>

@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:id="@+id/create_account_fragment_form">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/banner_bar_slim_Relative"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/banner_bar_slim"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@color/pseudo_white"
+            android:elevation="2dp" />
+
+        <ImageView
+            android:id="@+id/iv_logo_slim"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:contentDescription="@string/app_name"
+            android:elevation="2.5dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/logo_paniagua" />
+
+    </RelativeLayout>
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/loader_create_form"
+            android:layout_centerInParent="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            android:visibility="gone"
+            app:lottie_fileName="loader.json" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="50dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:id="@+id/relative_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tvCreateAccount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10sp"
+                        android:gravity="center"
+                        android:text="@string/create_account"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+
+                    <EditText
+                        android:id="@+id/nombre_editText_cc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_below="@+id/tvCreateAccount"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="16dp"
+                        android:background="@drawable/label"
+                        android:hint="@string/name"
+                        android:inputType="textPersonName"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="0dp"
+                        android:textColor="@color/negro"
+                        android:textColorHint="@color/lightGray"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/apellidos_editText_cc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_below="@+id/nombre_editText_cc"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="16dp"
+                        android:background="@drawable/label"
+                        android:hint="@string/lastname"
+                        android:inputType="textPersonName"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="0dp"
+                        android:textColor="@color/negro"
+                        android:textColorHint="@color/lightGray"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/email_editText_cc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_below="@+id/apellidos_editText_cc"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="16dp"
+                        android:background="@drawable/label"
+                        android:hint="@string/email"
+                        android:inputType="textEmailAddress"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="0dp"
+                        android:textColor="@color/negro"
+                        android:textColorHint="@color/lightGray"
+                        android:textSize="16sp" />
+
+                    <RelativeLayout
+                        android:id="@+id/passwrd_relative_cc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/email_editText_cc"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginBottom="16dp">
+
+                        <EditText
+                            android:id="@+id/passwrd_editText_cc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="0dp"
+                            android:layout_marginEnd="16dp"
+                            android:background="@drawable/label"
+                            android:hint="@string/password"
+                            android:inputType="textPassword"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="0dp"
+                            android:textColor="@color/negro"
+                            android:textColorHint="@color/lightGray"
+                            android:textSize="16sp" />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/btn_show_pass_cc"
+                            android:layout_width="60dp"
+                            android:layout_height="30dp"
+                            android:layout_alignEnd="@+id/passwrd_editText_cc"
+                            android:layout_centerVertical="true"
+                            android:layout_marginTop="0dp"
+                            android:layout_marginEnd="8dp"
+                            android:background="@drawable/rounded_edit_text_shape"
+                            android:focusable="true"
+                            android:foreground="?attr/selectableItemBackground"
+                            android:text="@string/show"
+                            android:textAllCaps="false"
+                            android:textColor="@color/negro"
+                            android:textSize="12sp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/passwrd_confirm_relative_cc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/passwrd_relative_cc"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true">
+
+                        <EditText
+                            android:id="@+id/passwrd_confirm_editText_cc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="0dp"
+                            android:layout_marginEnd="16dp"
+                            android:background="@drawable/label"
+                            android:hint="@string/password_confirm"
+                            android:inputType="textPassword"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="0dp"
+                            android:textColor="@color/negro"
+                            android:textColorHint="@color/lightGray"
+                            android:textSize="16sp" />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/btn_show_pass_confirm_cc"
+                            android:layout_width="60dp"
+                            android:layout_height="30dp"
+                            android:layout_alignEnd="@+id/passwrd_confirm_editText_cc"
+                            android:layout_centerVertical="true"
+                            android:layout_marginTop="0dp"
+                            android:layout_marginEnd="8dp"
+                            android:background="@drawable/rounded_edit_text_shape"
+                            android:focusable="true"
+                            android:foreground="?attr/selectableItemBackground"
+                            android:text="@string/show"
+                            android:textAllCaps="false"
+                            android:textColor="@color/negro"
+                            android:textSize="12sp" />
+
+                    </RelativeLayout>
+
+                    <com.hbb20.CountryCodePicker
+                        android:id="@+id/phoneCodeInput"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/passwrd_confirm_relative_cc"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="8dp"
+                        android:textColor="@color/negro"
+                        app:ccpDialog_textColor="@color/negro"
+                        app:ccp_arrowColor="@color/lightGray"
+                        app:ccp_autoDetectCountry="true"
+                        app:ccp_contentColor="@color/lightGray"
+                        app:ccp_showNameCode="false" />
+
+                    <EditText
+                        android:id="@+id/celphone_editText_cc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_below="@+id/passwrd_confirm_relative_cc"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_toEndOf="@+id/phoneCodeInput"
+                        android:background="@drawable/label"
+                        android:hint="@string/celphone"
+                        android:inputType="number"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="0dp"
+                        android:textColor="@color/negro"
+                        android:textColorHint="@color/lightGray"
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:id="@+id/linear_layout_privacy"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/celphone_editText_cc"
+                        android:orientation="horizontal"
+                        android:weightSum="5">
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/btn_privacy"
+                            android:layout_width="0dp"
+                            android:layout_height="30dp"
+                            android:layout_marginStart="0dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="0dp"
+                            android:layout_weight="4"
+                            android:background="@null"
+                            android:elevation="1dp"
+                            android:text="@string/show_privacy_policy"
+                            android:textAlignment="textEnd"
+                            android:textAllCaps="false"
+                            android:textColor="@color/negro" />
+
+                        <CheckBox
+                            android:id="@+id/check_privacy"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="10dp"
+                            android:buttonTint="@color/colorPrimary"
+                            android:layout_weight="1" />
+
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/create_account_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_below="@+id/linear_layout_privacy"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/btn_secundary"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:text="@string/create_account"
+                        android:textColor="@color/negro" />
+
+                </RelativeLayout>
+            </LinearLayout>
+        </ScrollView>
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

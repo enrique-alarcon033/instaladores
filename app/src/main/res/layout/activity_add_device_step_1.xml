@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <include
+        android:id="@+id/top_menu"
+        layout="@layout/yonusa_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentTop="true" />
+
+    <TextView
+        android:id="@+id/tv_title_step_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/top_menu"
+        android:layout_marginTop="18sp"
+        android:gravity="center"
+        android:text="@string/title_step_1"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary"
+        android:textSize="21sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_wifi_name_step_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_title_step_1"
+        android:layout_marginTop="18sp"
+        android:gravity="center"
+        android:text="Wi_fi"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary"
+        android:textSize="21sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/iv_add_wifi"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_below="@id/tv_wifi_name_step_1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="30sp"
+        android:layout_marginEnd="16dp"
+        android:gravity="center"
+        android:src="@drawable/ico_off_wifi" />
+
+    <ImageView
+        android:id="@+id/iv_hardware"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_below="@id/iv_add_wifi"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="18sp"
+        android:layout_marginEnd="16dp"
+        android:gravity="center"
+        android:src="@drawable/img_hardware" />
+
+    <Button
+        android:id="@+id/btn_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@id/iv_hardware"
+        android:layout_marginTop="18sp"
+        android:padding="16dp"
+        android:background="@drawable/btn_secundary"
+        android:layout_centerHorizontal="true"
+        android:text="@string/refresh"
+        android:textColor="@color/negro"
+        android:textSize="16sp"
+        android:textStyle="normal" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_refresh"
+       >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_hardware_instructions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18sp"
+                android:gravity="center"
+                android:padding="16dp"
+                android:text="@string/tv_hardware_instructions"
+                android:textColor="@color/negro"
+                android:textSize="16sp"
+                android:textStyle="normal" />
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

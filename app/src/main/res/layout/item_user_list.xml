@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cell_user_card"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:layout_marginVertical="8dp"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="4dp"
+        android:foreground="?attr/selectableItemBackground">
+
+        <ImageView
+            android:layout_centerVertical="true"
+            android:id="@+id/iv_user_list_profile_icn"
+            android:background="@color/clear"
+            android:src="@drawable/icn_user"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:elevation="3dp"
+            android:padding="8dp"/>
+
+        <TextView
+            android:id="@+id/tv_list_user_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="8dp"
+            android:layout_toEndOf="@id/iv_user_list_profile_icn"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:background="@color/clear"
+            android:elevation="3dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle="bold"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_guest_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_list_user_name"
+            android:layout_marginTop="4dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_toEndOf="@id/iv_user_list_profile_icn"
+            android:background="@color/clear"
+            android:elevation="3dp"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:textColor="@color/colorPrimary"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

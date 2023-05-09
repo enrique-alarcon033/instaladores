@@ -1,0 +1,10 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.PaniaguaInstaladores" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/pressed_bg</item>
+        <item name="colorPrimaryDark">@color/privacyPagecolor</item>
+        <item name="colorAccent">@color/pseudo_white</item>
+        <!-- Customize your theme here. -->
+    </style>
+</resources>

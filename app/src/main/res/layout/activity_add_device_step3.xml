@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.add_devices.set_up_devices.SetNameSendPassActivity">
+
+    <include
+        android:id="@+id/top_menu"
+        layout="@layout/yonusa_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentTop="true" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/loader_step3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="loader.json"
+        app:lottie_loop="true" />
+
+    <TextView
+        android:id="@+id/tv_title_almost_there"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/top_menu"
+        android:gravity="center"
+        android:text="@string/title_add_user"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary"
+        android:textSize="21sp"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/top_menu" />
+
+
+    <TextView
+        android:id="@+id/tv_setup_instructions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_title_almost_there"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:paddingStart="10dp"
+        android:layout_marginTop="30dp"
+        android:paddingEnd="10dp"
+        android:text="@string/tv_setup_instructions"
+        android:textAlignment="center"
+        android:textColor="@color/negro"
+        android:textColorHint="#75ffffff"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title_almost_there" />
+
+    <TextView
+        android:id="@+id/tv_wifi_name"
+        android:layout_width="200dp"
+        android:layout_height="31dp"
+        android:layout_below="@+id/tv_setup_instructions"
+        android:layout_centerHorizontal="true"
+        android:padding="5dp"
+        android:text="Wifi"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp"
+        android:textStyle="italic"
+        android:layout_marginTop="15dp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_dot_line"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_setup_instructions" />
+
+    <ImageView
+        android:id="@+id/iv_dot_line"
+        android:layout_width="220dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/tv_setup_instructions"
+        android:layout_centerHorizontal="true"
+        android:src="@color/white25"
+        android:layout_marginTop="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_setup_instructions" />
+
+    <EditText
+        android:id="@+id/et_password"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_below="@+id/tv_wifi_name"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/label"
+        android:hint="@string/lb_wifi_pass"
+        android:padding="8dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:singleLine="true"
+        android:text=""
+        android:textColor="@color/negro"
+        android:textColorHint="@color/lightGray"
+        android:textCursorDrawable="@null"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@+id/iv_dot_line" />
+
+    <EditText
+        android:id="@+id/et_name_device"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/et_password"
+        android:layout_alignParentStart="true"
+
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/label"
+        android:hint="@string/lb_device_name"
+        android:padding="8dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:singleLine="true"
+        android:text=""
+        android:layout_marginTop="20dp"
+        android:textColor="@color/negro"
+        android:textColorHint="@color/lightGray"
+        android:textCursorDrawable="@null"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@+id/et_password"
+        tools:layout_editor_absoluteX="-26dp" />
+
+    <Button
+        android:id="@+id/btn_send_register"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_below="@+id/et_name_device"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/btn_secundary"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:text="@string/btn_register_device"
+        android:textColor="@color/negro"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "32279858859",
+    "project_id": "paniagua-f1e82",
+    "storage_bucket": "paniagua-f1e82.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:32279858859:android:439263e28f5834b5f4f1ee",
+        "android_client_info": {
+          "package_name": "com.yonusa.instaladores_plus"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "32279858859-ouj61kov2omie4k6tpu1qgq6vvoo3vav.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDVBSAhBd8261M0XO-br2cWkIsjVUtDa8M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "32279858859-ouj61kov2omie4k6tpu1qgq6vvoo3vav.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

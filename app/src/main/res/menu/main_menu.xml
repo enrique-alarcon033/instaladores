@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_jugadores"
+            android:icon="@drawable/i_cursos"
+            android:title="Cursos" />
+        <item
+            android:id="@+id/nav_albitros"
+            android:icon="@drawable/ic_calculadora"
+            android:title="Calculadora" />
+        <item
+            android:id="@+id/nav_jornadas"
+            android:icon="@drawable/ic_tienda"
+            android:title= "Productos" />
+    </group>
+
+    <item android:title="Administrador">
+        <menu>
+            <item
+                android:id="@+id/nav_cerrar"
+                android:icon="@drawable/close"
+                android:title="Cerrar Sesión" />
+
+        </menu>
+    </item>
+
+    <item android:title="Desarrollo">
+        <menu>
+            <item
+
+                android:title="Versión 1.0.003" />
+
+        </menu>
+    </item>
+</menu>

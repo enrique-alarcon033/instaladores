@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.add_devices.set_up_devices.FinishAddingDeviceActivity">
+
+    <include
+        android:id="@+id/top_menu"
+        layout="@layout/yonusa_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentTop="true" />
+
+    <TextView
+        android:id="@+id/inst1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/top_menu"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="25dp"
+        android:text="@string/title_success"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/top_menu" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/succes_lottie"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/inst2"
+        app:layout_constraintTop_toBottomOf="@+id/inst1"
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="success.json"
+        app:lottie_loop="true" />
+
+
+    <TextView
+        android:id="@+id/inst2"
+        android:layout_width="wrap_content"
+        android:layout_height="140dp"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:text="@string/lb_success_instructions"
+        android:textColor="@color/negro"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_finish"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_finish"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp"
+        android:background="@drawable/btn_secundary"
+        android:foreground="?attr/selectableItemBackground"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:visibility="gone"
+        android:text="@string/btn_success"
+        android:textColor="@color/negro"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/loader_step4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="loader.json"
+        app:lottie_loop="true" />
+    <com.gusakov.library.PulseCountDown
+        android:id="@+id/pulseCountDown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="15"
+        android:textSize="100sp"
+        app:pc_startValue="5"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/contador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="15"
+        android:textColor="@color/colorPrimary"
+        android:textSize="45dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inst1" />
+
+    <TextView
+        android:id="@+id/texto_conteo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Se esta configurando tu modulo Wifi"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+
+        android:textColor="@color/negro"
+        android:layout_marginTop="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contador" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

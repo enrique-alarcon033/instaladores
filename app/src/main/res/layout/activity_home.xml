@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.homeScreen.view.HomeActivity"
+    android:background="@drawable/gradient_start"
+    android:id="@+id/relative_containerHome">
+
+    <View
+        android:id="@+id/banner_user_info"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_below="@id/top_menu"
+        android:background="@color/colorPrimary"/>
+
+    <TextView
+        android:id="@+id/tv_fullName"
+        android:layout_below="@+id/top_menu"
+        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="21sp"
+        android:textColor="@color/pseudo_white"
+        android:textAlignment="center"
+        />
+
+    <TextView
+        android:id="@+id/tv_userEmail"
+        android:layout_below="@+id/tv_fullName"
+        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="@color/pseudo_white"
+        android:textAlignment="center"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/device_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/banner_user_info"
+        android:background="@color/clear"
+        android:padding="8dp"
+        tools:listitem="@layout/item_homescreen"
+        />
+
+    <include
+        android:id="@+id/top_menu"
+        android:layout_width="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_height="?attr/actionBarSize"
+        layout="@layout/yonusa_toolbar"/>
+
+</RelativeLayout>

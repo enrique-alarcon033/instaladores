@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    tools:context=".ui.createAccount.view.Activation_count">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/banner_bar_slim_Relative"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <View
+                android:id="@+id/banner_bar_slim"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:background="@color/pseudo_white"
+                android:elevation="2dp" />
+
+            <ImageView
+                android:id="@+id/iv_logo_slim"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:contentDescription="@string/app_name"
+                android:elevation="2.5dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/logo_paniagua" />
+
+        </RelativeLayout>
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/loader_activation_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/activation_count_btn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/banner_bar_slim_Relative"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="loader.json"
+            app:lottie_loop="true" />
+
+        <TextView
+            android:id="@+id/tv_activation_count_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/banner_bar_slim_Relative"
+            android:gravity="center"
+            android:text="@string/count_activation"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary"
+            android:textSize="18sp"
+            android:layout_marginTop="15dp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/banner_bar_slim_Relative" />
+
+        <EditText
+            android:id="@+id/editText_activation_code"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/tv_activation_count_title"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/label"
+            android:hint="@string/activation_code"
+            android:inputType="number"
+            android:paddingStart="10dp"
+            android:paddingEnd="0dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="25dp"
+            android:textColor="@color/negro"
+            android:textColorHint="@color/lightGray"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@+id/tv_activation_count_description" />
+
+        <TextView
+            android:id="@+id/tv_activation_count_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editText_activation_code"
+            android:text="@string/activation_text_description"
+            android:textAlignment="textStart"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:textColor="@color/negro"
+            android:layout_marginTop="15dp"
+
+            app:layout_constraintTop_toBottomOf="@+id/tv_activation_count_title"
+            tools:layout_editor_absoluteX="16dp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/activation_count_btn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/tv_activation_count_description"
+            android:background="@drawable/btn_secundary"
+            android:foreground="?attr/selectableItemBackground"
+            android:text="@string/activation_code_btn_accept"
+            android:layout_marginBottom="25dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:textColor="@color/negro"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
